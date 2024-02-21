@@ -4,6 +4,7 @@ const newTodoChild = ref("");
 const emits = defineEmits(['addTodo'])
 const addTodo = () => {
     emits('addTodo' , newTodoChild.value) ;
+    newTodoChild.value = '' ;
 }
 </script>
 
