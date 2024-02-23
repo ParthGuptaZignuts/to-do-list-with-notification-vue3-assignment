@@ -1,8 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import Card from "./card.vue";
-import ToDoAppHeading from "./ToDoAppHeading.vue";
-import ToDoListHeading from "./ToDoListHeading.vue";
 import ToDoInput from "./ToDoInput.vue";
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
@@ -61,9 +59,9 @@ onMounted(() => {
 
 <template>
   <div>
-    <ToDoAppHeading />
+    <h1>ToDo App</h1>
     <ToDoInput @addTodo="addTodo" />
-    <ToDoListHeading />
+    <h4>To do List</h4>
     <ul>
       <li v-for="(todo, index) in todos" :key="index">
         <card :item="todo" @remove="removeTodo(index)" />
