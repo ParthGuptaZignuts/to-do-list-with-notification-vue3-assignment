@@ -4,7 +4,6 @@ import Card from "./card.vue";
 import ToDoInput from "./ToDoInput.vue";
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
-import ListHeader from "./ListHeader.vue";
 
 const newTodo = ref("");
 const defaultData = [
@@ -67,6 +66,8 @@ onMounted(() => {
         <card :item="todo" @remove="removeTodo(index)" />
       </li>
     </ul>
-    <ListHeader v-if="todos.length === 0" />
+    <div v-if="todos.length === 0">
+      <p>Empty List</p>
+    </div>
   </div>
 </template>

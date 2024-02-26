@@ -5,7 +5,3 @@ import MainTodo from './components/MainTodo.vue';
 <template>
 <MainTodo/>
 </template>
-
-<style scoped>
-
-</style>
